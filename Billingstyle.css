@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.flex {
+    display: flex;
+}
+.container{
+    height: 100vh;
+    background-color:#EEF7FF;
+}
+.head{
+    background-color: #4D869C;
+    text-align: center;
+}
+.heading{
+    font-size: xx-large;
+}
+
+.head h1{
+    color:white;
+    line-height: 45px;
+}
+
+.first-row{
+    position: relative;
+    left: 55px;
+    margin-top: 15px;
+    width: 80%;         
+    justify-content: space-around;
+}
+
+.second-row{
+    position: relative;
+    left: 100px;
+    margin-top: 19px;
+    width: 70%;
+    justify-content: space-between;
+    margin-left: 70px;
+}
+
+.inp{
+    width: 60px;
+    height: 20px;
+    background-color: #CDE8E5;
+}
+
+.btn1{
+    margin-top: 15px;
+    width: 100px;
+    height: 30px;
+    border: 2px solid gray;
+    background-color: #7AB2B2;
+    color: white;
+    text-align: center;
+ 
+}
+
+.box {
+    margin-top: 20px;
+    width: 100vw;
+    height: 60vh;
+    border-top: 2px solid  black;
+}
+
+.box-inside{
+    width: 80vw;
+    height: 50vh;
+    margin-top: 10px;
+    border: 2px solid  black;
+    margin: 45px auto;
+    overflow: auto;
+}
+
+th{
+    background-color: #7AB2B2;
+    text-align: left;
+}
+td{
+ background-color: #CDE8E5;
+ text-align: center;
+ 
+    
+}
+
+a{
+    color: red;
+}
+
+.btn2{
+    border: 2px solid gray;
+    margin-left: 5px;
+    width: 100px;
+}
+
+.btns{
+    margin-top: -20px;
+    margin-left: 77%;
+}
+.container2{
+    width: 100%;
+}
+table{
+    width: 100%;
+}
+#message{
+    color: red;
+}
+tr a{
+    cursor: pointer;
+}
+.btn1 p{
+    margin-top: 6px;
+    cursor: pointer;
+}
+i{
+    margin-left: 50px;
+}

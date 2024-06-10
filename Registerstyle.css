@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'poppins';
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    /* background: rgba(0, 0, 0, 0.7) url('https://media.licdn.com/dms/image/C4D1BAQGvHZSJizDKJw/company-background_10000/0/1583500021660/r_mart_cover?e=2147483647&v=beta&t=suSTYS_pBiSF3cjdsOf_aywOC5nR4SEhSxa_WIpxyhI'); */
+    background-color:#7AB2B2  ;
+    background-size: auto;
+    background-size: cover;
+    background-blend-mode: hue;
+    /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head{
+    margin-top: 30px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.form{
+    height: 95vh;
+    width: 350px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.form::-webkit-scrollbar{
+    border-radius: 50px;
+}
+
+
+.input-form{
+    margin-top: 60px;
+    margin-left: 40px;
+}
+.input{
+    width: 75%;
+    margin-top: 10px;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    background: transparent;
+}
+
+input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: none;
+}
+
+.user-pass{
+    margin-top: 20px;
+}
+
+.btn{
+
+    margin: 50px 0 30px 90px; 
+    width: 50%;
+    background-color: #4D869C;
+    transition: background-color 0.5s;
+    color: white;
+    font-weight: 700;
+    border: none;
+    height: 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+.btn:hover{
+    background-color: white;
+    color: #4D869C;
+
+}

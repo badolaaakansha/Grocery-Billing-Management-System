@@ -1,0 +1,81 @@
+ 
+
+
+
+
+//dt.totalRecord[i]['name']; 
+function checkajax(bid){
+    xobj=new XMLHttpRequest();
+    xobj.onreadystatechange = function(){
+        //if(xobj.readystate == 4 && xobj.status == 200){
+        //dt = JSON.parse(xobj.responseText);    
+        document.getElementById("get").innerHTML = dt.totalTake;
+        document.getElementById("give").innerHTML = dt.totalGive;
+        str = '';
+        str = str + "<div class='container'>";
+        str = str + "<table border='2' class='totalrecords'>";
+
+        for(i=0; i<dt.totalRecord.length; i++){                    
+            str = str + "<tr>";
+            str = str + "<td>";
+            str = str + dt.totalRecord[i]['name'];+"</a>"  
+            str = str + "</td>";
+            str = str + "<td>";
+            str = str + "<span style='color:green'>Taken=</span>"+ dt.totalRecord[i]['given'] +  "<br>";
+            str = str + "</td>";
+            str = str + "<td>";
+            str = str + "<span style='color:red'>Given=</span>" + dt.totalRecord[i]['taken'] + "<br>";
+            str = str + "</td>";
+            str = str + "</tr>";
+            
+        }
+        str = str + "</table>";
+        str = str + "<div class='addcustomer'>";
+        str = str + "<a href='addcustomers.php?bid="+bid+"'>+Addcustomer</a>";
+        str = str + "</div>";
+        str = str + "</div>";
+        document.getElementById("display_here").innerHTML =str;
+    }
+    xobj.open("GET", 'fetchcustomers.php', true);
+    xobj.send();
+}
+
+
+
+<?php session_start();
+
+include "connection.php";
+
+$bid = $_GET['bid'];
+
+$sql = "select * from customerdetail where business_id ='$bid'";
+
+$result = $conn->query($sql);
+
+ 
+
+$sql = "SELECT sum(`taken`) as take FROM `customerdetail` WHERE `business_id`='$bid'";
+
+$result1 = $conn->query($sql);
+
+$row = $result1->fetch_assoc();
+$totalTake =  $row['take'];
+
+$sql = "SELECT sum(`given`) as give FROM `customerdetail` WHERE `business_id`='$bid'";
+
+$result2 = $conn->query($sql);
+$row = $result2->fetch_assoc();
+$totalGive = $row['give'];
+$i = 0;
+$dt = array();
+while($row = $result->fetch_assoc()){
+    $dt[] = $row;
+}
+
+$data = array(
+    'totalGive' => $totalGive,
+    'totalTake' =>$totalTake,
+    'totalRecord' => $dt,
+);
+echo json_encode($data);
+?>

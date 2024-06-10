@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 50%;
+}
+
+.previous{
+    position: absolute;
+    color: white;
+    cursor: pointer;
+    left: 15px;
+    top: 15px;
+}
+
+img{
+    width: 40px;
+}
+
+.dev-icon{
+    width: 30px;
+    height: 30px;
+}
+
+.invoice-container {
+    height: 100vh;
+    width: 100vw;
+}
+
+.head{
+    height: 60px;
+    padding: 20px;
+    background-color: rgb(16, 85, 183);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.company-data {
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+
+}
+
+.company-data p {
+    color: rgb(247, 240, 240);
+}
+
+.company-data-two {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.section-one{
+    display: flex;
+    flex-direction: column;
+}
+
+.section-two{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.table{
+    width: 95%;
+    height: 200px;
+    border-top: 2px solid gray;
+    margin: 10px auto;
+}
+td{
+    text-align: center;
+}
+table{
+    width: 100%;
+}
+
+.footer{
+    margin-top: 75px;
+    display: flex;
+    height: 15vh;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+.notes{
+    padding: 20px;
+    width: 60%;
+
+    background-color: rgb(96, 191, 232);
+}
+
+.total{
+    color: white;
+    text-align: end;
+    padding: 40px;
+    width: 40%;
+    background-color:rgb(16, 85, 183) ;
+}

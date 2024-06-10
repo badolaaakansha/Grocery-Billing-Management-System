@@ -1,0 +1,48 @@
+body{
+    
+    background-size: auto;
+  background-size: cover;
+  background-blend-mode: hue;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.nav_bar{
+    height: 70px;
+    background-color: rgb(68, 66, 66);
+    text-align: center;
+    display: flex;
+}
+.nav_bar h1{
+    margin: auto;
+    color: white;
+}
+    .btns{
+ display: flex;
+ justify-content: center;
+ padding: 100PX;
+ margin: 10%;
+}
+.btn1{
+
+    margin: 10px;
+    font-size: medium;
+    color: white;
+    padding: 30px;
+   background-color:transparent;
+    border: solid white 2px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.btn2{
+    color:white;
+    margin: 10px;
+    padding: 20px;
+    font-size: medium;
+    border: solid white 2px;
+    background-color:transparent;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
